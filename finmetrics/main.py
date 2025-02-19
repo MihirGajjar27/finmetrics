@@ -1,3 +1,6 @@
+import numpy as np
+from typing import Sequence, Union
+
 
 # Basic Return Calculations
 def holding_period_return(beginning_value: float, ending_value: float, total_income: float = 0.0) -> float:
@@ -14,10 +17,12 @@ def holding_period_return(beginning_value: float, ending_value: float, total_inc
     :return: holding period return for a period between: time @ ending value & time @ beginning value
     :rtype: float
     """
+    if beginning_value == 0:
+        raise ValueError("Beginning Value must be non zero")
     return (ending_value - beginning_value + total_income) / beginning_value
 
 
-def holding_period_return_multi_period(annual_returns: "list[float] | np.ndarray") -> float:
+def holding_period_return_multi_period(annual_returns: Union[Sequence[float], np.ndarray]) -> float:
     """
     :param annual_returns: A list or numpy ndarray of annual returns for a series of periods
     :type annual_returns: list[float] || numpy ndarray
