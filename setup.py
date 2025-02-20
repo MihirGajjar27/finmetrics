@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="finmetrics",  # Replace with your package name
-    version="0.1.2",
+    version="0.1.3",
     author="Mihir Gajjar",
     description="A python package to perform financial operations",
     long_description=open("README.md").read(),
