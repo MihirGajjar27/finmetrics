@@ -1,4 +1,3 @@
-LICENSE.txt
 README.md
 setup.py
 finmetrics/__init__.py
